@@ -1,10 +1,10 @@
 # beating google and making the DuoQin f25 megacool and usable! aka. notes on the Duoqin f25!
 I have imported the Duoqin F25 to Denmark and i'm sharing some important QoL fixes i've implemented on mine that works as of 29.11.2025.
-<img width="600" height="800" alt="image" src="https://github.com/user-attachments/assets/dd0dbf7c-b2b8-41ac-a036-a98d16f5471c" />
+<img width="250" height="400" alt="image" src="https://github.com/user-attachments/assets/dd0dbf7c-b2b8-41ac-a036-a98d16f5471c" />
 
 *First off i want to say you should always double check sources and packages for yourself, and what works for someone may not work for everyone. I do not claim any responsibility if you brick your phone doing this, but if you take proper precautions you should be fine. This guide involves rooting, as it's currently the only way to attain device integrity, which is needed for most banking apps etc.*
 
-
+\_O.o_/ if you lose integrity after a few weeks/months you just need to press the PIF Action Button and repeat the steps for Tricky Store and you should be good again \_o.O_/
 ### The following tools will be used in the initial process
 - [MTKCLIENT](https://github.com/bkerler/mtkclient?tab=readme-ov-file) to make backup, and flash new magisk ROM. 
 - [ADB](https://developer.android.com/tools/adb) Android Debug Bridge, check if boot img A or B (for me it was A)
@@ -41,7 +41,7 @@ You will need the following Magisk Modules (always download newest releases):
 - [Tricky Store](https://github.com/5ec1cff/TrickyStore) 
 - [Tricky Addon](https://github.com/KOWX712/Tricky-Addon-Update-Target-List) to configure target list!
 - [Zygisk - LSPOSED](https://github.com/LSPosed/LSPosed) you can run native zygisk from magisk but with this module you can also run LSPOSED modules such as HMA:
-
+- [KSUwebUI](https://github.com/adivenxnataly/KsuWebUI)
 
 ### 1. Download Play Integrity Fork and Shamiko and Tricky Store + addon and Zygisk/or enable magisk zygisk + KSUwebUI
 and then reboot the phone. 
@@ -62,7 +62,7 @@ Search for it in the LSPOSED framework or [github](https://github.com/Dr-TSNG/Hi
 
 
 ## Now you are :-P rooted and integrity-ied :3 yayyyy!
-<img width="1250" height="1500" alt="image" src="https://github.com/user-attachments/assets/51fdf54d-f390-4587-9d45-ed167303138e" />
+<img width="625" height="750" alt="image" src="https://github.com/user-attachments/assets/51fdf54d-f390-4587-9d45-ed167303138e" />
 [pixelart source](https://www.pixilart.com/art/space-af626ff36a50967?ft=topic&ft_id=19)
 also thanks to the earlier guides for the Duoqin/Qin [F21 Pro](https://github.com/AlikornSause/Notes-on-QIN-F21-PRO) and [F22 Pro](https://github.com/shuuryou/f22pro) and [this guide](https://binboupan.github.io/2023/08/qin-f22-pro/) too. They were all immensly helpful and while not everything worked, enough did so i could make it work on the F25 and write this guide :3
 
