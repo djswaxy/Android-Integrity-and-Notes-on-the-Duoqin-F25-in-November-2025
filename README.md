@@ -11,11 +11,10 @@ My phone came with the bootloader unlocked and google play store installed by de
 I cannot stress how important it is to **not** lock the bootloader if it is already unlocked, this will brick your device. If your phone came with a stock ROM you may not need
 to root it as you already may have device integrity, but likely not google play store. Here are the next steps:
 
-### 1. Turn off the phone completely
+### 1. Turn off the phone completely 
 After this, take your computer and if you're running it in windows with python as i was write `python mtk_gui.py` then connect your phone with usbc AS YOU HOLD DOWN THE VOLUME DOWN BUTTON AND NO OTHER KEYS!
 For me, MTKClient tried to connect but couldnt, so i just disconnected the usbc cable and put it in again as i was holding down the volume down button and it connected. A screen like this should pop up:
-
-  <img width="779" height="831" alt="image" src="https://github.com/user-attachments/assets/86e8e8a5-a980-4610-8c93-d32dc0aef99e" />
+ <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/86e8e8a5-a980-4610-8c93-d32dc0aef99e" />
 ### 2. MOST IMPORTANT STEP: BACKUP THE ENTIRE PHONE!!!
 So, you'll want to go to the "Read Partitions" Tab and select all partitions and copy them over to your computer. This takes +-6 Hours but you will need the boot image, which if you lose will be
 impossible to find ever again. And it is always good to have a backup anyway and with this you will have a complete device snapshot.
