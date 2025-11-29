@@ -1,5 +1,6 @@
 # Practical-notes-for-Duoqin-Qin-F25
 I have imported the Duoqin F25 to Denmark and i'm sharing some important QoL fixes i've implemented on mine that works as of 29.11.2025.
+<img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/dd0dbf7c-b2b8-41ac-a036-a98d16f5471c" />
 
 *First off i want to say you should always double check sources and packages for yourself, and what works for someone may not work for everyone. I do not claim any responsibility if you brick your phone doing this, but if you take proper precautions you should be fine. This guide involves rooting, as it's currently the only way to attain device integrity, which is needed for most banking apps etc.*
 ### The following tools will be used in the initial process
@@ -27,3 +28,30 @@ In the Magisk app press Install on the first card named "Magisk" then select you
 ### 4. Transfer the patched boot image back to your computer, then connect to MTK client following step 1. 
 Go to flash partitions and flash your now magisk patched boot_a.img to the boot_a partiton. DO NOT INTERRUPT THE CONNECTION AS YOU FLASH THE ROM! When mtkclient says its done, disconnect the cable and reboot the phone.
 Congratulations, your phone is now rooted with magisk. You now have no play integrity, not even basic but we will get to fixing that below!
+
+## Getting Basic and Device Integrity, Hiding Root etc.
+You will need the following Magisk Modules (always download newest releases):
+**NOTE**: After september 2025 Google revised its Play Integrity API to be more aggresive, where as before you would only need PIF and Shamiko we will add two modules to get basic and device integrity
+[PLAYINTEGRITYFORK](https://github.com/osm0sis/PlayIntegrityFork) By osm0sis and chiteroman @xdadevelopers
+[Shamiko](https://github.com/LSPosed/LSPosed.github.io) by LSPOSED
++
+[Tricky Store](https://github.com/5ec1cff/TrickyStore) 
+[Tricky Addon](https://github.com/KOWX712/Tricky-Addon-Update-Target-List) to configure target list!
+[Zygisk - LSPOSED](https://github.com/LSPosed/LSPosed) you can run native zygisk from magisk but with this module you can also run LSPOSED modules such as HMA:
+
+
+### 1. Download Play Integrity Fork and Shamiko and Tricky Store + addon and Zygisk/or enable magisk zygisk + KSUwebUI
+and then reboot the phone. 
+Go under "Configure Denylist" in Magisk settings, DO NOT ENFORCE DENYLIST as Shamiko does this :-3. Then choose all google play services and google play itself, press it and make sure to select all the services relating to these.There should now be an Action Button next to PIF. Press the action button to get a new device fingerprint which you will need!
+It will trick google into thinking you are a pixel!
+Then go into 
+
+### 2. Press the tricky store action button.
+Open the hamburger menu and select all, then deselect unnessecary and press SAVE. then open the menu again and press Keybox, then Valid. Then Set Security Patch and choose "Auto"
+### 3. Reboot the phone
+Then enable flight mode/disable wifi and mobile data. Go into APPS in settings and delete storage and cache for **Google Play Store** and **Google Play Services**. Wait 2 minutes and enable internet again.
+To test for integrity do it directly in the google play store (max 10 checks per hour or google will get suspicious). Press your profile picture, then settings, then about, then press *Play Store version* 7 times
+to become a developer. Then go to General, Scroll to developer options and press "Check Integrity" under Play Integrity. now HOPEFULLY! you will get
+Labels: [MEETS_BASIC_INTEGRITY, MEETS_DEVICE_INTEGRITY] if you don't please retry previous steps regarding magisk modules and/or google it and you will find more things to try. This exact formula worked for me with the DuoQin F25 in November of 2025.
+### 4. Optional, install HMA in LSPOSED.
+Search for it in the LSPOSED framework and install it. Here i recommend making a blacklist and choosing all your rooting apps + termux and other root related apps. Then add the blacklist for all apps you want to hide root from. For example banking apps!
