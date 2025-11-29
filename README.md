@@ -1,6 +1,6 @@
 # beating google and making the DuoQin f25 megacool and usable! aka. notes on the Duoqin f25!
 I have imported the Duoqin F25 to Denmark and i'm sharing some important QoL fixes i've implemented on mine that works as of 29.11.2025.
-<img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/dd0dbf7c-b2b8-41ac-a036-a98d16f5471c" />
+<img width="600" height="800" alt="image" src="https://github.com/user-attachments/assets/dd0dbf7c-b2b8-41ac-a036-a98d16f5471c" />
 
 *First off i want to say you should always double check sources and packages for yourself, and what works for someone may not work for everyone. I do not claim any responsibility if you brick your phone doing this, but if you take proper precautions you should be fine. This guide involves rooting, as it's currently the only way to attain device integrity, which is needed for most banking apps etc.*
 
@@ -8,7 +8,7 @@ I have imported the Duoqin F25 to Denmark and i'm sharing some important QoL fix
 ### The following tools will be used in the initial process
 - [MTKCLIENT](https://github.com/bkerler/mtkclient?tab=readme-ov-file) to make backup, and flash new magisk ROM. 
 - [ADB](https://developer.android.com/tools/adb) Android Debug Bridge, check if boot img A or B (for me it was A)
-- [MAGISK] (https://topjohnwu.github.io/Magisk/install.html) To root the phone!
+- [MAGISK](https://topjohnwu.github.io/Magisk/install.html) To root the phone!
 
 My phone came with the bootloader unlocked and google play store installed by default. That is some hacked chinese ROM with suprisingly no bloatware, just a barebones android version.
 I cannot stress how important it is to **not** lock the bootloader if it is already unlocked, this will brick your device. If your phone came with a stock ROM you may not need
@@ -35,12 +35,12 @@ Congratulations, your phone is now rooted with magisk. You now have no play inte
 ## Getting Basic and Device Integrity, Hiding Root etc.
 You will need the following Magisk Modules (always download newest releases):
 **NOTE**: After september 2025 Google revised its Play Integrity API to be more aggresive, where as before you would only need PIF and Shamiko we will add two modules to get basic and device integrity
-[PLAYINTEGRITYFORK](https://github.com/osm0sis/PlayIntegrityFork) By osm0sis and chiteroman @xdadevelopers
-[Shamiko](https://github.com/LSPosed/LSPosed.github.io) by LSPOSED
-+
-[Tricky Store](https://github.com/5ec1cff/TrickyStore) 
-[Tricky Addon](https://github.com/KOWX712/Tricky-Addon-Update-Target-List) to configure target list!
-[Zygisk - LSPOSED](https://github.com/LSPosed/LSPosed) you can run native zygisk from magisk but with this module you can also run LSPOSED modules such as HMA:
+- [PLAYINTEGRITYFORK](https://github.com/osm0sis/PlayIntegrityFork) By osm0sis and chiteroman @xdadevelopers
+- [Shamiko](https://github.com/LSPosed/LSPosed.github.io) by LSPOSED
+- + required since new google integrity patches
+- [Tricky Store](https://github.com/5ec1cff/TrickyStore) 
+- [Tricky Addon](https://github.com/KOWX712/Tricky-Addon-Update-Target-List) to configure target list!
+- [Zygisk - LSPOSED](https://github.com/LSPosed/LSPosed) you can run native zygisk from magisk but with this module you can also run LSPOSED modules such as HMA:
 
 
 ### 1. Download Play Integrity Fork and Shamiko and Tricky Store + addon and Zygisk/or enable magisk zygisk + KSUwebUI
@@ -55,7 +55,7 @@ This will let you configure tricky addon. Open the hamburger menu and select all
 Then enable flight mode/disable wifi and mobile data. Go into APPS in settings and delete storage and cache for **Google Play Store** and **Google Play Services**. Wait 2 minutes and enable internet again.
 To test for integrity do it directly in the google play store (max 10 checks per hour or google will get suspicious). Press your profile picture, then settings, then about, then press *Play Store version* 7 times
 to become a developer. Then go to General, Scroll to developer options and press "Check Integrity" under Play Integrity. now HOPEFULLY! you will get
-Labels: [MEETS_BASIC_INTEGRITY, MEETS_DEVICE_INTEGRITY] if you don't please retry previous steps regarding magisk modules and/or google it and you will find more things to try. This exact formula worked for me with the DuoQin F25 in November of 2025.
+**Labels: [MEETS_BASIC_INTEGRITY, MEETS_DEVICE_INTEGRITY]** if you don't please retry previous steps regarding magisk modules and/or google it and you will find more things to try. This exact formula worked for me with the DuoQin F25 in November of 2025.
 ### 4. Optional, install HMA in LSPOSED.
 Search for it in the LSPOSED framework or [github](https://github.com/Dr-TSNG/Hide-My-Applist) and install it. Here i recommend making a blacklist and choosing all your rooting apps + termux and other root related apps. Then add the blacklist for all apps you want to hide root from. For example banking apps!
 <img width="600" height="250" alt="image" src="https://github.com/user-attachments/assets/2b7c5e84-db79-4435-afa0-970114e9fb46" />
